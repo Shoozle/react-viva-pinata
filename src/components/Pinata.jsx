@@ -68,11 +68,21 @@ export default Pinata
 const Card = styled.div`
    display: flex;
    flex-direction: column;
+   background: rgb(55,216,218);
+   background: linear-gradient(157deg, rgba(55,216,218,1) 0%, rgba(45,168,253,1) 100%);
+   border-radius: 1rem;
+   padding: 0.6rem 1rem;
+   ul {
+      transition: all .4s ease;
+      overflow:hidden;
+   }
    ul.visible {
-      display: block;
+      height: auto;
+      opacity: 1;
    }
    ul.invisible {
-      display: none;
+      height: 0;
+      opacity: 0;
    }
 `
 

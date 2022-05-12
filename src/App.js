@@ -1,9 +1,9 @@
-import Pinata from './components/Pinata';
+import Pinatas from './pages/Pinatas';
 
 function App() {
   return (
     <div className="App">
-      <Pinata/>
+      <Pinatas/>
     </div>
   );
 }
