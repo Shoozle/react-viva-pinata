@@ -24,7 +24,7 @@ export const Pinatas = [
          'Feeding it a loaf of bread changes its color to pink/white',
       ],
       uses: [
-         'Eating 1 Bispotti helps meet the Robean Romance requirements',
+         'Eating 1 Bispotti helps meet the <a href="/robean">Robean</a> Romance requirements',
          'Eating 1 Bispotti helps meet the Arocknid Trick requirements',
          'Eating 1 Bispotti helps tame the sour Profitamole',
       ],
