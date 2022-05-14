@@ -1,16 +1,12 @@
 import { useEffect, useState } from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
-import { useDropdown } from "../hooks/useDropdown";
+import useDropdown from "../hooks/useDropdown";
 
 
 function Pinata(pata) {
 
    const pinata = { ...pata.pinata }
    // const [wildcard, setWildcard] = useState(false);
-   const [uses, setUses] = useState(false);
    const [masterRomancer, setMasterRomancer] = useState(() => {
       const saved = localStorage.getItem(`${pinata.name}`);
       const initValue = JSON.parse(saved);
@@ -44,16 +40,7 @@ function Pinata(pata) {
             {romanceReqs}
             {trickReqs}
             {speciesReqs}
-            {/* <h4 onClick={() => { setWildcard(!wildcard) }}>Wildcard Versions</h4>
-            <ul className={wildcard ? 'visible' : 'invisible'}>
-               <li>Bumps</li>
-               <li>Ears</li>
-               <li>Three Horns</li>
-            </ul> */}
-            <h4 onClick={() => { setUses(!uses) }}>{pinata.name} Uses <span><FontAwesomeIcon icon={uses ? faMinus : faPlus} /></span> </h4>
-            <ul className={uses ? 'visible' : 'invisible'}>
-               {pinata.uses.map((uses, index) => (<li dangerouslySetInnerHTML={{__html: uses}} key={index}></li>))}
-            </ul>
+            {usesReqs}
             <form>
                <div>
                   <label htmlFor={pinata.name}>Master Romancer</label>
