@@ -64,5 +64,36 @@ export const Pinatas = [
          'Feed a Fudgehog to a Badgesicle to teach it trick 1'
       ],
       masterRomancer: false
+   },
+   {
+      name : 'Robean',
+      appear: [
+         'Can only be found in the Piñarctic',
+      ],
+      visit: [
+         `Trap it with a Holly Berry in the Piñarctic`,
+      ],
+      resident: [
+         'You have 1 square pinometer of snow (1%)',
+      ],
+      romance: [
+         'Has eaten 1 Bispotti',
+         'Have 3 square pinometers of snow (3%)',
+         'There is a Robean house in the garden',
+      ],
+      trick: [
+         'Feed it a hazelnut seed to have it perform Trick 1',
+         'Feed it a hazelnut to have it perform Trick 2'
+      ],
+      species: [
+         'Feeding it a carrot changes its color to orange',
+         'Feeding it a gooseberry fool changes its color to blue',
+         'Feeding it a fireweed changes its color to purple',
+      ],
+      uses: [
+         'Eating 1 Robean helps meet the Syrupent Romance requirements.',
+         'Eating 1 Robean helps meet the Buzzenge Romance requirements.',
+      ],
+      masterRomancer: false
    }
 ]

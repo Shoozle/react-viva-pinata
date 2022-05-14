@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 function Pinata(pata) {
 
    const pinata = { ...pata.pinata }
 
-   const [appear, setAppear] = useState(true);
+   const [appear, setAppear] = useState(false);
    const [visit, setVisit] = useState(false);
    const [resident, setResident] = useState(false);
    const [romance, setRomance] = useState(false);
    const [trick, setTrick] = useState(false);
    const [species, setSpecies] = useState(false);
    // const [wildcard, setWildcard] = useState(false);
-   const [uses, setUses] = useState(true);
+   const [uses, setUses] = useState(false);
    const [masterRomancer, setMasterRomancer] = useState(() => {
       const saved = localStorage.getItem(`${pinata.name}`);
       const initValue = JSON.parse(saved);
@@ -34,27 +34,27 @@ function Pinata(pata) {
       <Card>
          <h3>{pinata.name}</h3>
          <div>
-            <h4 onClick={() => { setAppear(!appear) }} >Appear Requirements <span><FontAwesomeIcon icon={appear ? faArrowUp : faArrowDown} /></span> </h4>
+            <h4 onClick={() => { setAppear(!appear) }} >Appear Requirements <span><FontAwesomeIcon icon={appear ? faMinus : faPlus} /></span> </h4>
             <ul className={appear ? 'visible' : 'invisible'}>
                {pinata.appear.map((appear, index) => (<li key={index}>{appear}</li>))}
             </ul>
-            <h4 onClick={() => { setVisit(!visit) }}>Visit Requirements <span><FontAwesomeIcon icon={visit ? faArrowUp : faArrowDown} /></span> </h4>
+            <h4 onClick={() => { setVisit(!visit) }}>Visit Requirements <span><FontAwesomeIcon icon={visit ? faMinus : faPlus} /></span> </h4>
             <ul className={visit ? 'visible' : 'invisible'}>
                {pinata.visit.map((visit, index) => (<li key={index}>{visit}</li>))}
             </ul>
-            <h4 onClick={() => { setResident(!resident) }}>Resident Requirements <span><FontAwesomeIcon icon={resident ? faArrowUp : faArrowDown} /></span> </h4>
+            <h4 onClick={() => { setResident(!resident) }}>Resident Requirements <span><FontAwesomeIcon icon={resident ? faMinus : faPlus} /></span> </h4>
             <ul className={resident ? 'visible' : 'invisible'}>
                {pinata.resident.map((resident, index) => (<li key={index}>{resident}</li>))}
             </ul>
-            <h4 onClick={() => { setRomance(!romance) }}>Romance Requirements <span><FontAwesomeIcon icon={romance ? faArrowUp : faArrowDown} /></span> </h4>
+            <h4 onClick={() => { setRomance(!romance) }}>Romance Requirements <span><FontAwesomeIcon icon={romance ? faMinus : faPlus} /></span> </h4>
             <ul className={romance ? 'visible' : 'invisible'}>
                {pinata.romance.map((romance, index) => (<li key={index}>{romance}</li>))}
             </ul>
-            <h4 onClick={() => { setTrick(!trick) }}>Trick Requirements <span><FontAwesomeIcon icon={trick ? faArrowUp : faArrowDown} /></span> </h4>
+            <h4 onClick={() => { setTrick(!trick) }}>Trick Requirements <span><FontAwesomeIcon icon={trick ? faMinus : faPlus} /></span> </h4>
             <ul className={trick ? 'visible' : 'invisible'}>
                {pinata.trick.map((trick, index) => (<li key={index}>{trick}</li>))}
             </ul>
-            <h4 onClick={() => { setSpecies(!species) }}>Species + Color Variants <span><FontAwesomeIcon icon={species ? faArrowUp : faArrowDown} /></span> </h4>
+            <h4 onClick={() => { setSpecies(!species) }}>Species + Color Variants <span><FontAwesomeIcon icon={species ? faMinus : faPlus} /></span> </h4>
             <ul className={species ? 'visible' : 'invisible'}>
                {pinata.species.map((species, index) => (<li key={index}>{species}</li>))}
             </ul>
@@ -64,7 +64,7 @@ function Pinata(pata) {
                <li>Ears</li>
                <li>Three Horns</li>
             </ul> */}
-            <h4 onClick={() => { setUses(!uses) }}>Fudgehog Uses <span><FontAwesomeIcon icon={uses ? faArrowUp : faArrowDown} /></span> </h4>
+            <h4 onClick={() => { setUses(!uses) }}>{pinata.name} Uses <span><FontAwesomeIcon icon={uses ? faMinus : faPlus} /></span> </h4>
             <ul className={uses ? 'visible' : 'invisible'}>
                {pinata.uses.map((uses, index) => (<li key={index}>{uses}</li>))}
             </ul>
