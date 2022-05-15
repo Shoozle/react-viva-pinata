@@ -1,6 +1,7 @@
-export const Pinatas = [
+export const initialPinatas = [
    {
-      name : 'Bispotti',
+      id: 1,
+      name: 'Bispotti',
       appear: [
          'Have any type of flower in the garden',
       ],
@@ -24,14 +25,16 @@ export const Pinatas = [
          'Feeding it a loaf of bread changes its color to pink/white',
       ],
       uses: [
-         'Eating 1 Bispotti helps meet the <NavLink href="/robean">Robean</NavLink> Romance requirements',
+         'Eating 1 Bispotti helps meet the Robean Romance requirements',
          'Eating 1 Bispotti helps meet the Arocknid Trick requirements',
          'Eating 1 Bispotti helps tame the sour Profitamole',
       ],
-      masterRomancer: false
+      masterRomancer: JSON.parse(localStorage.getItem(`Bispotti master romancer`)) || false,
+      pinned: true
    },
    {
-      name : 'Fudgehog',
+      id: 2,
+      name: 'Fudgehog',
       appear: [
          'Have 1 Holly bush in the garden',
       ],
@@ -63,10 +66,12 @@ export const Pinatas = [
       uses: [
          'Feed a Fudgehog to a Badgesicle to teach it trick 1'
       ],
-      masterRomancer: false
+      masterRomancer: JSON.parse(localStorage.getItem(`Fudgehog master romancer`)) || false,
+      pinned: false
    },
    {
-      name : 'Robean',
+      id: 3,
+      name: 'Robean',
       appear: [
          'Can only be found in the Piñarctic',
       ],
@@ -94,6 +99,7 @@ export const Pinatas = [
          'Eating 1 Robean helps meet the Syrupent Romance requirements.',
          'Eating 1 Robean helps meet the Buzzenge Romance requirements.',
       ],
-      masterRomancer: false
+      masterRomancer: JSON.parse(localStorage.getItem(`Robean master romancer`)) || false,
+      pinned: false
    }
 ]
