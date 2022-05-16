@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Cards = styled.div`
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+gap: 2rem;
+margin: 2rem;
+`
+
 export const Card = styled.div`
    display: flex;
    flex-direction: column;

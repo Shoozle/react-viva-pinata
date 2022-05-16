@@ -1,41 +1,30 @@
 import { useReducer } from "react"
-import styled from "styled-components"
 import Pinata from "../components/Pinata"
-import { Card } from "../Styles"
+import { Card, Cards } from "../Styles"
 import { initialPinatas } from "../pinataData"
-
-const pinataReducer = (state, action) => {
-   switch (action.type) {
-      case "MASTER_ROMANCER":
-         return state.map((pinata) => {
-            if (pinata.id === action.id) {
-               localStorage.setItem(`${pinata.name} master romancer`, JSON.stringify(!pinata.masterRomancer))
-               return { ...pinata, masterRomancer: !pinata.masterRomancer }
-            } else {
-               return pinata;
-            }
-         })
-      default:
-         return state;
-   }
-}
+import { pinataReducer } from "../reducers/pinnedReducer"
 
 function Pinatas() {
 
    const [pinatas, dispatch] = useReducer(pinataReducer, initialPinatas);
 
    const handleMasterRomancer = (pinata) => {
-      dispatch({ type: "MASTER_ROMANCER", id: pinata.id })
-      
+      dispatch({ type: "MASTER_ROMANCER", name: pinata.name })   
+   }
+   
+   const handlePinned = (pinata) => {
+      console.log('YOU TOUCHED ME')
+      dispatch({ type: "PINNED", name: pinata.name })   
    }
 
    return (
       <Cards>
          {
             pinatas.map((pinata) => (
-               <Card key={pinata.id}>
+               <Card key={pinata.name}>
                   <Pinata
                      pinata={pinata}
+                     onpin={() => {handlePinned(pinata)}}
                   />
                   <form>
                      <label htmlFor={pinata.name}>Master Romancer</label>
@@ -44,7 +33,6 @@ function Pinatas() {
                         checked={pinata.masterRomancer}
                         type="checkbox"
                         name={pinata.name}
-                        id={pinata.name}
                      />
                   </form>
                </Card>
@@ -53,13 +41,5 @@ function Pinatas() {
       </Cards>
    )
 }
-
-const Cards = styled.div`
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-   gap: 2rem;
-   margin: 2rem;
-`
-
 export default Pinatas
 

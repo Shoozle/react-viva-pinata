@@ -1,10 +1,9 @@
 import Pinatas from './pages/Pinatas';
-import Pinned from './pages/Pinned';
 
 function App() {
   return (
     <div className="App">
-      <Pinned/>
+      <h2>Pinatas</h2>
       <Pinatas/>
     </div>
   );

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect } from "react"
 import Dropdown from "./Dropdown";
 
-function Pinata(pata) {
+function Pinata(pata, onPin) {
 
    const pinata = { ...pata.pinata }
    const appearReqs = Dropdown('Appear Requirements', pinata.appear)
@@ -19,7 +19,7 @@ function Pinata(pata) {
 
    return (
       <div>
-         <h3>{pinata.name} <span> <FontAwesomeIcon icon={faThumbTack}/> </span></h3>
+         <h3>{pinata.name} <span> <FontAwesomeIcon icon={faThumbTack} onClick={() => onPin()}/> </span></h3>
          <div>
             {appearReqs}
             {visitReqs}
