@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/viva-pinata/static/css/main.24ba0c97.css",
-    "main.js": "/viva-pinata/static/js/main.a884c8fa.js",
-    "index.html": "/viva-pinata/index.html",
-    "main.24ba0c97.css.map": "/viva-pinata/static/css/main.24ba0c97.css.map",
-    "main.a884c8fa.js.map": "/viva-pinata/static/js/main.a884c8fa.js.map"
+    "main.css": "/react-viva-pinata/static/css/main.24ba0c97.css",
+    "main.js": "/react-viva-pinata/static/js/main.62d77bab.js",
+    "index.html": "/react-viva-pinata/index.html",
+    "main.24ba0c97.css.map": "/react-viva-pinata/static/css/main.24ba0c97.css.map",
+    "main.62d77bab.js.map": "/react-viva-pinata/static/js/main.62d77bab.js.map"
   },
   "entrypoints": [
     "static/css/main.24ba0c97.css",
-    "static/js/main.a884c8fa.js"
+    "static/js/main.62d77bab.js"
   ]
 }
