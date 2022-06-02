@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/viva-pinata/static/css/main.24ba0c97.css",
+    "main.js": "/viva-pinata/static/js/main.a884c8fa.js",
+    "index.html": "/viva-pinata/index.html",
+    "main.24ba0c97.css.map": "/viva-pinata/static/css/main.24ba0c97.css.map",
+    "main.a884c8fa.js.map": "/viva-pinata/static/js/main.a884c8fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24ba0c97.css",
+    "static/js/main.a884c8fa.js"
+  ]
+}
