@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function useDropdown(title, listItems) {
 
-   const [show, setShow] = useState(false)
+   const [show, setShow] = useState(true)
    let dropdownBlock = (
       <>
          <h4 onClick={() => { setShow(!show) }} >{title} <span><FontAwesomeIcon icon={show ? faMinus : faPlus} /></span> </h4>
