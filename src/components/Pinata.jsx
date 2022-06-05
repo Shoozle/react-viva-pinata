@@ -19,7 +19,7 @@ function Pinata(pata, onPin) {
 
    return (
       <div>
-         <h3>{pinata.name} <span> <FontAwesomeIcon icon={faThumbTack} onClick={() => onPin()}/> </span></h3>
+         <h3>{pinata.name} <a href="/"> <FontAwesomeIcon icon={faThumbTack}/> </a></h3>
          <div>
             {appearReqs}
             {visitReqs}

@@ -622,7 +622,7 @@ export const initialPinatas = [
          'Has eaten 1 Cherrapin (sour)',
          'You have 19 square pinometers of water (19%)',
          'Has eaten 1 Cherrapin',
-         'Has eaten 1 Cherrapin',
+         'Has eaten 1 Sweetooth',
       ],
       romance: [
          'You have 22 square pinometers of water (22%)',
@@ -806,7 +806,7 @@ export const initialPinatas = [
       resident: [
          'You have 20 square pinometers of water',
          'Have 12 bullrushes in the garden',
-         'Has won a fight against a Redhott.',
+         'Has won a fight against a Reddhott.',
       ],
       romance: [
          'You have 25 square pinometers of water',
@@ -1192,12 +1192,10 @@ export const initialPinatas = [
    {
       name: 'Hoghurt',
       appear: [
-         `Feeding a Cheesecake to a Rashberry turns it into a Hoghurt`,
          ``,
          ``,
       ],
       visit: [
-         `Feeding a Cheesecake to a Rashberry turns it into a Hoghurt`,
          ``,
          ``,
       ],
@@ -1483,12 +1481,10 @@ export const initialPinatas = [
    {
       name: 'Lackatoad',
       appear: [
-         `Feeding a nightshade berry to a Lickatoad, then tapping or whacking it with the shovel before it falls ill, turns it into a Lackatoad.`,
          ``,
          ``,
       ],
       visit: [
-         `Feeding a nightshade berry to a Lickatoad, then tapping or whacking it with the shovel before it falls ill, turns it into a Lackatoad.`,
          ``,
          ``,
       ],
@@ -1947,12 +1943,10 @@ export const initialPinatas = [
    {
       name: 'Parmadillo',
       appear: [
-         `Feeding a coconut to a Fudgehog turns it into a Parmadillo`,
          ``,
          ``,
       ],
       visit: [
-         `Feeding a coconut to a Fudgehog turns it into a Parmadillo`,
          ``,
          ``,
       ],
@@ -2113,12 +2107,10 @@ export const initialPinatas = [
    {
       name: 'Pigxie',
       appear: [
-         `The Pigxie is created by cross-romancing a Swanana and a Rashberry after buying a mystery house from Willy Builder.`,
          ``,
          ``,
       ],
       visit: [
-         `The Pigxie is created by cross-romancing a Swanana and a Rashberry after buying a mystery house from Willy Builder.`,
          ``,
          ``,
       ],
@@ -2493,12 +2485,12 @@ export const initialPinatas = [
    {
       name: 'Reddhott',
       appear: [
-         `Setting a Taffly on fire (by directing it to a firebrand or near a fireweed) then quickly dousing it with the watering can turns it into a Reddhott`,
+         ``,
          ``,
          ``,
       ],
       visit: [
-         `Setting a Taffly on fire (by directing it to a firebrand or near a fireweed) then quickly dousing it with the watering can turns it into a Reddhott`,
+         ``,
          ``,
          ``,
       ],
